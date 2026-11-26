@@ -22,18 +22,11 @@
   </div>
 
   <main>
-    <p class="count" id="count"></p>
+    <p class="count"><span id="count"></span><button type="button" id="reset" hidden>Reset</button></p>
     <div class="table-wrap">
       <table>
         <thead>
-          <tr>
-            <th>Conference</th>
-            <th>Deadline</th>
-            <th>Notification</th>
-            <th>Location</th>
-            <th>Dates</th>
-            <th>Requirements</th>
-          </tr>
+          <tr id="heads"></tr>
         </thead>
         <tbody id="rows"></tbody>
       </table>

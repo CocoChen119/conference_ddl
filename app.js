@@ -1,6 +1,15 @@
 const MONTHS = ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"];
 
-const state = { cat: "all", region: "all", status: "all", q: "" };
+const state = { cat: "all", region: "all", status: "all", q: "", sort: "smart", dir: "asc" };
+
+const HEADS = [
+  ["name", "Conference"],
+  ["deadline", "Deadline"],
+  ["notify", "Notification"],
+  ["place", "Location"],
+  [null, "Dates"],
+  [null, "Requirements"]
+];
 
 function regionOf(c) {
   const place = (c.place || "").toLowerCase();
@@ -64,16 +73,22 @@ function inRegion(c, region) {
   return region === "all" || regionOf(c) === region;
 }
 
-function matches(c) {
-  if (!inCat(c, state.cat)) return false;
-  if (!inRegion(c, state.region)) return false;
-  const st = paperStatus(c);
-  if (state.status === "open" && st !== "open") return false;
-  if (state.status === "tba" && st !== "tba") return false;
-  if (state.status === "closed" && st !== "closed" && st !== "skip") return false;
+function matchesQuery(c) {
   if (!state.q) return true;
-  const hay = [c.abbr, c.name, c.place, c.when].filter(Boolean).join(" ").toLowerCase();
+  const hay = [c.abbr, c.name, c.place, c.when, c.req].filter(Boolean).join(" ").toLowerCase();
   return hay.includes(state.q);
+}
+
+function matchesStatus(c, status) {
+  if (status === "all") return true;
+  const st = paperStatus(c);
+  if (status === "open") return st === "open";
+  if (status === "tba") return st === "tba";
+  return st === "closed" || st === "skip";
+}
+
+function matches(c) {
+  return inCat(c, state.cat) && inRegion(c, state.region) && matchesQuery(c) && matchesStatus(c, state.status);
 }
 
 function sortKey(c) {
@@ -83,14 +98,39 @@ function sortKey(c) {
   return `${rank}-${date}-${c.abbr}`;
 }
 
+function compare(a, b) {
+  if (state.sort === "smart") return sortKey(a).localeCompare(sortKey(b));
+  const value = {
+    name: (c) => c.abbr.toLowerCase(),
+    deadline: (c) => c.deadline || "9999-99-99",
+    notify: (c) => c.notify || "9999-99-99",
+    place: (c) => (c.place || "\uffff").toLowerCase()
+  }[state.sort];
+  const dir = state.dir === "desc" ? -1 : 1;
+  const av = value(a);
+  const bv = value(b);
+  if (av < bv) return -dir;
+  if (av > bv) return dir;
+  return a.abbr.localeCompare(b.abbr);
+}
+
+function filtered() {
+  return CONFS.filter((c) => inCat(c, state.cat) && inRegion(c, state.region) && matchesQuery(c));
+}
+
+function isCustom() {
+  return state.cat !== "all" || state.region !== "all" || state.status !== "all" || state.q || state.sort !== "smart";
+}
+
 function renderNav() {
   const nav = document.getElementById("cats");
   nav.innerHTML = "";
   for (const cat of META.categories) {
-    const n = CONFS.filter((c) => inCat(c, cat.id) && inRegion(c, state.region)).length;
+    const n = CONFS.filter((c) => inCat(c, cat.id) && inRegion(c, state.region) && matchesQuery(c)).length;
     const btn = document.createElement("button");
     btn.type = "button";
     btn.className = cat.id === state.cat ? "on" : "";
+    btn.setAttribute("aria-pressed", String(cat.id === state.cat));
     btn.textContent = `${cat.label} ${n}`;
     if (cat.title) btn.title = cat.title;
     btn.addEventListener("click", () => {
@@ -108,10 +148,11 @@ function renderNav() {
   label.textContent = "Location";
   regions.appendChild(label);
   for (const region of META.regions) {
-    const n = CONFS.filter((c) => inCat(c, state.cat) && inRegion(c, region.id)).length;
+    const n = CONFS.filter((c) => inCat(c, state.cat) && inRegion(c, region.id) && matchesQuery(c)).length;
     const btn = document.createElement("button");
     btn.type = "button";
     btn.className = region.id === state.region ? "on" : "";
+    btn.setAttribute("aria-pressed", String(region.id === state.region));
     btn.textContent = `${region.label} ${n}`;
     btn.addEventListener("click", () => {
       state.region = region.id;
@@ -120,6 +161,7 @@ function renderNav() {
     regions.appendChild(btn);
   }
 
+  const pool = filtered();
   const seg = document.getElementById("status");
   seg.innerHTML = "";
   for (const item of [
@@ -128,10 +170,12 @@ function renderNav() {
     ["tba", "TBA"],
     ["closed", "Closed"]
   ]) {
+    const n = pool.filter((c) => matchesStatus(c, item[0])).length;
     const btn = document.createElement("button");
     btn.type = "button";
     btn.className = item[0] === state.status ? "on" : "";
-    btn.textContent = item[1];
+    btn.setAttribute("aria-pressed", String(item[0] === state.status));
+    btn.textContent = `${item[1]} ${n}`;
     btn.addEventListener("click", () => {
       state.status = item[0];
       render();
@@ -140,12 +184,43 @@ function renderNav() {
   }
 }
 
+function renderHeads() {
+  const row = document.getElementById("heads");
+  row.innerHTML = "";
+  for (const [key, label] of HEADS) {
+    const th = document.createElement("th");
+    if (!key) {
+      th.textContent = label;
+    } else {
+      const btn = document.createElement("button");
+      btn.type = "button";
+      btn.className = state.sort === key ? "sort on" : "sort";
+      const mark = state.sort === key ? (state.dir === "asc" ? " ↑" : " ↓") : "";
+      btn.textContent = label + mark;
+      btn.addEventListener("click", () => {
+        if (state.sort === key) state.dir = state.dir === "asc" ? "desc" : "asc";
+        else {
+          state.sort = key;
+          state.dir = "asc";
+        }
+        render();
+      });
+      th.appendChild(btn);
+    }
+    row.appendChild(th);
+  }
+}
+
 function renderRows() {
-  const list = CONFS.filter(matches).sort((a, b) => sortKey(a).localeCompare(sortKey(b)));
+  const list = CONFS.filter(matches).sort(compare);
   const body = document.getElementById("rows");
   body.innerHTML = "";
-  document.getElementById("empty").hidden = list.length > 0;
+  const empty = document.getElementById("empty");
+  empty.hidden = list.length > 0;
+  empty.textContent = list.length > 0 ? "" : "No conferences match.";
   document.getElementById("count").textContent = `${list.length} conference${list.length === 1 ? "" : "s"}`;
+  document.getElementById("reset").hidden = !isCustom();
+  renderHeads();
 
   for (const c of list) {
     const tr = document.createElement("tr");
@@ -174,9 +249,27 @@ function render() {
   renderRows();
 }
 
-document.getElementById("q").addEventListener("input", (event) => {
-  state.q = event.target.value.trim().toLowerCase();
-  renderRows();
+const search = document.getElementById("q");
+search.addEventListener("input", () => {
+  state.q = search.value.trim().toLowerCase();
+  render();
+});
+search.addEventListener("keydown", (event) => {
+  if (event.key !== "Escape" || !search.value) return;
+  search.value = "";
+  state.q = "";
+  render();
+});
+
+document.getElementById("reset").addEventListener("click", () => {
+  state.cat = "all";
+  state.region = "all";
+  state.status = "all";
+  state.q = "";
+  state.sort = "smart";
+  state.dir = "asc";
+  search.value = "";
+  render();
 });
 
 render();
