@@ -33,6 +33,16 @@ function notifyText(c) {
   return "—";
 }
 
+function esc(value) {
+  return String(value).replace(/[&<>"']/g, (ch) => ({
+    "&": "&amp;",
+    "<": "&lt;",
+    ">": "&gt;",
+    "\"": "&quot;",
+    "'": "&#39;"
+  }[ch]));
+}
+
 function matches(c) {
   if (state.cat !== "all" && !c.cats.includes(state.cat)) return false;
   const st = paperStatus(c);
@@ -100,23 +110,20 @@ function renderRows() {
   for (const c of list) {
     const tr = document.createElement("tr");
     const st = paperStatus(c);
-    const tags = [];
-    if (c.abstractOnly) tags.push("Abstracts");
-    if (c.tentative) tags.push("Tentative");
-    const tagHtml = tags.map((t) => `<span class="tag">${t}</span>`).join("");
-    const note = c.note ? `<span class="note">${c.note}</span>` : "";
     const deadlineClass = st === "open" ? "open" : "muted";
+    const abbr = c.url
+      ? `<a class="abbr" href="${esc(c.url)}" target="_blank" rel="noopener">${esc(c.abbr)}</a>`
+      : `<span class="abbr">${esc(c.abbr)}</span>`;
     tr.innerHTML = `
       <td>
-        <span class="abbr">${c.abbr}</span>${tagHtml}
-        <span class="name">${c.name}</span>
-        ${note}
+        ${abbr}
+        <span class="name">${esc(c.name)}</span>
       </td>
       <td class="${deadlineClass}">${deadlineText(c)}${c.abstract ? `<span class="note">Abstract ${fmt(c.abstract)}</span>` : ""}</td>
       <td>${notifyText(c)}</td>
-      <td>${c.place || "—"}</td>
-      <td>${c.when || "—"}</td>
-      <td>${c.url ? `<a href="${c.url}" target="_blank" rel="noopener">Site</a>` : ""}</td>
+      <td>${esc(c.place || "—")}</td>
+      <td>${esc(c.when || "—")}</td>
+      <td>${c.abstractOnly ? "Yes" : "—"}</td>
     `;
     body.appendChild(tr);
   }
