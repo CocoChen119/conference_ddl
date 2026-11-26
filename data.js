@@ -12,11 +12,6 @@ const META = {
       "title": "AI and language"
     },
     {
-      "id": "game",
-      "label": "Game",
-      "title": "Games"
-    },
-    {
       "id": "cv",
       "label": "CV",
       "title": "Computer vision and multimedia"
@@ -30,6 +25,11 @@ const META = {
       "id": "art",
       "label": "Art / Creativity",
       "title": "Art and creativity"
+    },
+    {
+      "id": "game",
+      "label": "Game",
+      "title": "Games"
     }
   ]
 };

@@ -1,13 +1,14 @@
 :root {
   color-scheme: light;
-  --ink: #1c2a33;
-  --muted: #5a6d78;
-  --line: #c5d5dc;
-  --open: #0d6a3a;
-  --page: #d5e4ec;
-  --bar: rgba(213, 228, 236, 0.94);
-  --row-a: #f6f0e4;
-  --row-b: #dceee4;
+  --ink: #1c3348;
+  --muted: #5c7388;
+  --line: #c9d8e8;
+  --open: #1a6d8c;
+  --page: #e7f0f8;
+  --bar: rgba(231, 240, 248, 0.94);
+  --row-a: #f4f8fc;
+  --row-b: #d5e5f4;
+  --accent: #1f4e79;
 }
 
 * { box-sizing: border-box; }
@@ -50,7 +51,7 @@ nav button, .seg button {
   color: var(--muted);
 }
 nav button { padding: 8px 10px; border-bottom: 2px solid transparent; white-space: nowrap; }
-nav button.on { color: var(--ink); border-bottom-color: var(--ink); }
+nav button.on { color: var(--accent); border-bottom-color: var(--accent); }
 
 .row { display: flex; gap: 10px; align-items: center; margin-top: 8px; }
 input[type="search"] {
@@ -59,13 +60,13 @@ input[type="search"] {
   border-radius: 8px;
   padding: 8px 10px;
   font: inherit;
-  background: #f7f3ea;
+  background: #f8fbfe;
   color: var(--ink);
 }
-input[type="search"]:focus { outline: 2px solid #ddd; }
+input[type="search"]:focus { outline: 2px solid #b9cfe4; }
 .seg { display: flex; border: 1px solid var(--line); border-radius: 8px; overflow: hidden; }
 .seg button { padding: 8px 12px; }
-.seg button.on { background: var(--ink); color: #fff; }
+.seg button.on { background: var(--accent); color: #f7fbff; }
 
 .count { color: var(--muted); font-size: 13px; margin: 14px 0; }
 .table-wrap { overflow-x: auto; }
@@ -90,12 +91,12 @@ td:nth-child(3),
 td:nth-child(5),
 td:nth-child(6) { white-space: nowrap; }
 .abbr { font-weight: 650; }
-a.abbr { color: var(--ink); text-underline-offset: 2px; }
+a.abbr { color: var(--accent); text-underline-offset: 2px; }
 .name { display: block; color: var(--muted); font-size: 13px; margin-top: 2px; }
 .note { display: block; color: var(--muted); font-size: 12px; margin-top: 4px; }
 .open { color: var(--open); font-weight: 600; }
 .muted { color: var(--muted); }
-a { color: var(--ink); }
+a { color: var(--accent); }
 .empty { color: var(--muted); }
 footer { padding-top: 18px; padding-bottom: 40px; color: var(--muted); font-size: 13px; }
 footer p { margin: 0 0 6px; }
