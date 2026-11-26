@@ -22,6 +22,11 @@ const META = {
       "title": "Language & Agents"
     },
     {
+      "id": "games",
+      "label": "Games",
+      "title": "Games"
+    },
+    {
       "id": "cog",
       "label": "Cognition",
       "title": "Cognition & Neuroscience"
@@ -622,41 +627,47 @@ const CONFS = [
   {
     "id": "aiide",
     "cats": [
-      "nlp"
+      "games"
     ],
     "abbr": "AIIDE",
     "name": "Artificial Intelligence and Interactive Digital Entertainment",
     "url": "https://aiide.org/",
-    "when": null,
-    "place": null,
+    "when": "8–12 Nov 2027",
+    "place": "University of Calgary, Canada",
     "deadline": null,
-    "notify": null
+    "notify": null,
+    "note": "Dates and location are set. The call for papers is not out."
   },
   {
     "id": "cogames",
     "cats": [
-      "nlp"
+      "games"
     ],
     "abbr": "CoG",
     "name": "IEEE Conference on Games",
-    "url": "https://ieee-cog.org/",
-    "when": null,
-    "place": null,
-    "deadline": null,
-    "notify": null
+    "url": "https://cog2027.u-aizu.ac.jp/",
+    "when": "2–5 Aug 2027",
+    "place": "University of Aizu, Aizuwakamatsu, Japan",
+    "deadline": "2027-03-01",
+    "notify": "2027-05-03",
+    "tz": "AoE",
+    "note": "Full papers. Proposals are due 5 Jan."
   },
   {
     "id": "fdg",
     "cats": [
-      "nlp"
+      "games"
     ],
     "abbr": "FDG",
     "name": "Foundations of Digital Games",
-    "url": "https://foundationofdigitalgames.org/",
-    "when": null,
-    "place": null,
-    "deadline": null,
-    "notify": null
+    "url": "http://www.fdg2027.org/authorinformation.html",
+    "when": "21–24 Jun 2027",
+    "place": "Melbourne, Australia",
+    "abstract": "2027-01-04",
+    "deadline": "2027-01-11",
+    "notify": "2027-03-01",
+    "tz": "AoE",
+    "note": "4 Jan is metadata. Full papers are due 11 Jan."
   },
   {
     "id": "agi",
@@ -738,10 +749,13 @@ const CONFS = [
     "abbr": "CCN",
     "name": "Cognitive Computational Neuroscience",
     "url": "https://www.ccneuro.org/",
-    "when": null,
-    "place": null,
-    "deadline": null,
-    "notify": null
+    "when": "26–29 Jul 2027",
+    "place": "Edinburgh International Conference Centre, UK",
+    "abstract": "2027-02-01",
+    "deadline": "2027-02-04",
+    "notify": null,
+    "tz": "AoE",
+    "note": "8-page proceedings. Extended abstracts are due 1 Apr. Notification is not listed yet."
   },
   {
     "id": "escop",
@@ -750,13 +764,14 @@ const CONFS = [
     ],
     "abbr": "ESCoP",
     "name": "European Society for Cognitive Psychology Conference",
-    "url": "https://www.escop.eu/",
-    "when": null,
-    "place": null,
-    "deadline": null,
+    "url": "https://escop2027.org/key-dates",
+    "when": "30 Aug – 4 Sep 2027",
+    "place": "Babeș-Bolyai University, Cluj-Napoca, Romania",
+    "deadline": "2027-03-15",
     "notify": null,
+    "notifyText": "8–15 Apr 2027",
     "abstractOnly": true,
-    "note": "Abstracts only."
+    "note": "Talks, blitz talks, and posters. Abstracts only."
   },
   {
     "id": "vss",
@@ -766,12 +781,12 @@ const CONFS = [
     "abbr": "VSS",
     "name": "Vision Sciences Society Annual Meeting",
     "url": "https://www.visionsciences.org/",
-    "when": null,
-    "place": null,
+    "when": "21–25 May 2027",
+    "place": "Hyatt Regency, Seattle, USA",
     "deadline": null,
     "notify": null,
     "abstractOnly": true,
-    "note": "Abstracts only."
+    "note": "Abstracts only. The abstract deadline is in 2026."
   },
   {
     "id": "ecvp",
@@ -780,13 +795,13 @@ const CONFS = [
     ],
     "abbr": "ECVP",
     "name": "European Conference on Visual Perception",
-    "url": "https://ecvp.org/",
-    "when": null,
-    "place": null,
-    "deadline": null,
-    "notify": null,
+    "url": "https://ecvp2027.dpg.unipd.it/",
+    "when": "29 Aug – 2 Sep 2027",
+    "place": "University of Padova, Italy",
+    "deadline": "2027-04-06",
+    "notify": "2027-05-26",
     "abstractOnly": true,
-    "note": "Abstracts only."
+    "note": "Abstracts only. Symposium proposals are due 18 Jan."
   },
   {
     "id": "cosyne",
@@ -796,12 +811,12 @@ const CONFS = [
     "abbr": "COSYNE",
     "name": "Computational and Systems Neuroscience",
     "url": "https://www.cosyne.org/",
-    "when": null,
-    "place": null,
+    "when": "11–16 Mar 2027",
+    "place": "Montréal, Canada",
     "deadline": null,
     "notify": null,
     "abstractOnly": true,
-    "note": "The short name is COSYNE, not CVSS. Abstracts only."
+    "note": "Abstracts only. The abstract deadline was in 2026."
   },
   {
     "id": "cns",
@@ -810,13 +825,12 @@ const CONFS = [
     ],
     "abbr": "CNS",
     "name": "Annual Computational Neuroscience Meeting",
-    "url": "https://www.cnsorg.org/",
-    "when": null,
-    "place": null,
+    "url": "https://www.cnsorg.org/future-meetings",
+    "when": "10–14 Jul 2027",
+    "place": "Gran Canaria, Spain",
     "deadline": null,
     "notify": null,
-    "abstractOnly": true,
-    "note": "Abstracts only."
+    "note": "Dates and location are set. The submission deadline is not out."
   },
   {
     "id": "sfn",
@@ -825,13 +839,13 @@ const CONFS = [
     ],
     "abbr": "SfN",
     "name": "Society for Neuroscience Annual Meeting",
-    "url": "https://www.sfn.org/",
-    "when": null,
-    "place": null,
+    "url": "https://www.sfn.org/meetings/neuroscience-2027",
+    "when": "23–27 Oct 2027",
+    "place": "McCormick Place, Chicago, USA",
     "deadline": null,
     "notify": null,
     "abstractOnly": true,
-    "note": "Abstracts only."
+    "note": "Abstracts only. The abstract deadline is not out."
   },
   {
     "id": "fens",
@@ -914,11 +928,15 @@ const CONFS = [
     ],
     "abbr": "ETRA",
     "name": "ACM Symposium on Eye Tracking Research & Applications",
-    "url": "https://etra.acm.org/",
-    "when": null,
-    "place": null,
-    "deadline": null,
-    "notify": null
+    "url": "https://etra.acm.org/2027/cfp.html",
+    "when": "7–10 Jun 2027",
+    "place": "Pamplona, Spain",
+    "abstract": "2027-02-04",
+    "deadline": "2027-02-11",
+    "notify": "2027-03-25",
+    "tz": "AoE",
+    "deadlineLabel": "Short papers",
+    "note": "Full papers closed in 2026."
   },
   {
     "id": "icdl",
