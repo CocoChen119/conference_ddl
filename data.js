@@ -9,32 +9,22 @@ const META = {
     {
       "id": "ai",
       "label": "AI",
-      "title": "AI & Machine Learning"
+      "title": "AI, language, and games"
     },
     {
       "id": "cv",
-      "label": "Vision",
-      "title": "Vision & Multimedia"
-    },
-    {
-      "id": "nlp",
-      "label": "Language",
-      "title": "Language & Agents"
-    },
-    {
-      "id": "games",
-      "label": "Games",
-      "title": "Games"
+      "label": "CV",
+      "title": "Computer vision and multimedia"
     },
     {
       "id": "cog",
-      "label": "Cognition",
-      "title": "Cognition & Neuroscience"
+      "label": "Cognition / Perception",
+      "title": "Cognition and perception"
     },
     {
       "id": "art",
-      "label": "Interaction",
-      "title": "Creativity & Interaction"
+      "label": "Art / Creativity",
+      "title": "Art and creativity"
     }
   ]
 };
@@ -477,7 +467,7 @@ const CONFS = [
   {
     "id": "acl",
     "cats": [
-      "nlp"
+      "ai"
     ],
     "abbr": "ACL",
     "name": "Annual Meeting of the Association for Computational Linguistics",
@@ -493,7 +483,7 @@ const CONFS = [
   {
     "id": "emnlp",
     "cats": [
-      "nlp"
+      "ai"
     ],
     "abbr": "EMNLP",
     "name": "Empirical Methods in Natural Language Processing",
@@ -506,7 +496,7 @@ const CONFS = [
   {
     "id": "aacl",
     "cats": [
-      "nlp"
+      "ai"
     ],
     "abbr": "AACL",
     "name": "Asia-Pacific Chapter of the ACL",
@@ -520,7 +510,7 @@ const CONFS = [
   {
     "id": "colm",
     "cats": [
-      "nlp"
+      "ai"
     ],
     "abbr": "COLM",
     "name": "Conference on Language Modeling",
@@ -533,7 +523,7 @@ const CONFS = [
   {
     "id": "lrec",
     "cats": [
-      "nlp"
+      "ai"
     ],
     "abbr": "LREC",
     "name": "Language Resources and Evaluation Conference",
@@ -546,7 +536,7 @@ const CONFS = [
   {
     "id": "ijcnlp",
     "cats": [
-      "nlp"
+      "ai"
     ],
     "abbr": "IJCNLP",
     "name": "International Joint Conference on Natural Language Processing",
@@ -560,7 +550,7 @@ const CONFS = [
   {
     "id": "conll",
     "cats": [
-      "nlp"
+      "ai"
     ],
     "abbr": "CoNLL",
     "name": "Conference on Computational Natural Language Learning",
@@ -573,7 +563,7 @@ const CONFS = [
   {
     "id": "inlg",
     "cats": [
-      "nlp"
+      "ai"
     ],
     "abbr": "INLG",
     "name": "International Conference on Natural Language Generation",
@@ -586,7 +576,7 @@ const CONFS = [
   {
     "id": "sigdial",
     "cats": [
-      "nlp"
+      "ai"
     ],
     "abbr": "SIGDIAL",
     "name": "Annual Meeting of the Special Interest Group on Discourse and Dialogue",
@@ -599,7 +589,7 @@ const CONFS = [
   {
     "id": "interspeech",
     "cats": [
-      "nlp"
+      "ai"
     ],
     "abbr": "INTERSPEECH",
     "name": "Conference of the International Speech Communication Association",
@@ -614,7 +604,7 @@ const CONFS = [
   {
     "id": "starsem",
     "cats": [
-      "nlp"
+      "ai"
     ],
     "abbr": "*SEM",
     "name": "Joint Conference on Lexical and Computational Semantics",
@@ -627,7 +617,7 @@ const CONFS = [
   {
     "id": "aiide",
     "cats": [
-      "games"
+      "ai"
     ],
     "abbr": "AIIDE",
     "name": "Artificial Intelligence and Interactive Digital Entertainment",
@@ -641,7 +631,7 @@ const CONFS = [
   {
     "id": "cogames",
     "cats": [
-      "games"
+      "ai"
     ],
     "abbr": "CoG",
     "name": "IEEE Conference on Games",
@@ -656,7 +646,7 @@ const CONFS = [
   {
     "id": "fdg",
     "cats": [
-      "games"
+      "ai"
     ],
     "abbr": "FDG",
     "name": "Foundations of Digital Games",
@@ -672,7 +662,7 @@ const CONFS = [
   {
     "id": "agi",
     "cats": [
-      "nlp"
+      "ai"
     ],
     "abbr": "AGI",
     "name": "Artificial General Intelligence",
@@ -685,7 +675,7 @@ const CONFS = [
   {
     "id": "icwsm",
     "cats": [
-      "nlp"
+      "ai"
     ],
     "abbr": "ICWSM",
     "name": "International AAAI Conference on Web and Social Media",
@@ -701,7 +691,7 @@ const CONFS = [
   {
     "id": "sigir",
     "cats": [
-      "nlp"
+      "ai"
     ],
     "abbr": "SIGIR",
     "name": "Research and Development in Information Retrieval",
@@ -716,7 +706,7 @@ const CONFS = [
   {
     "id": "cikm",
     "cats": [
-      "nlp"
+      "ai"
     ],
     "abbr": "CIKM",
     "name": "Conference on Information and Knowledge Management",
