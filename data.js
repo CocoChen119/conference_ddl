@@ -1,32 +1,40 @@
 const META = {
   "updated": "2026-11-26",
   "categories": [
-    { "id": "all", "label": "All", "title": "All conferences" },
-    { "id": "ai", "label": "AI", "title": "AI & Machine Learning" },
-    { "id": "cv", "label": "Vision", "title": "Vision & Multimedia" },
-    { "id": "nlp", "label": "Language", "title": "Language & Agents" },
-    { "id": "cog", "label": "Cognition", "title": "Cognition & Neuroscience" },
-    { "id": "art", "label": "Interaction", "title": "Creativity & Interaction" }
+    {
+      "id": "all",
+      "label": "All",
+      "title": "All conferences"
+    },
+    {
+      "id": "ai",
+      "label": "AI",
+      "title": "AI & Machine Learning"
+    },
+    {
+      "id": "cv",
+      "label": "Vision",
+      "title": "Vision & Multimedia"
+    },
+    {
+      "id": "nlp",
+      "label": "Language",
+      "title": "Language & Agents"
+    },
+    {
+      "id": "cog",
+      "label": "Cognition",
+      "title": "Cognition & Neuroscience"
+    },
+    {
+      "id": "art",
+      "label": "Interaction",
+      "title": "Creativity & Interaction"
+    }
   ]
 };
 
 const CONFS = [
-  {
-    "id": "aaai",
-    "cats": [
-      "ai"
-    ],
-    "abbr": "AAAI",
-    "name": "AAAI Conference on Artificial Intelligence",
-    "url": "https://aaai.org/conference/aaai/aaai-27/",
-    "when": "16–23 Feb 2027",
-    "place": "Montréal, Canada",
-    "abstract": "2026-07-21",
-    "deadline": "2026-07-28",
-    "notify": "2026-11-30",
-    "tz": "AoE",
-    "note": "Main track. Palais des congrès de Montréal."
-  },
   {
     "id": "ijcai",
     "cats": [
@@ -86,38 +94,6 @@ const CONFS = [
     "abstract": "2027-01-14",
     "deadline": "2027-01-22",
     "notify": "2027-05-03",
-    "tz": "AoE"
-  },
-  {
-    "id": "iclr",
-    "cats": [
-      "ai"
-    ],
-    "abbr": "ICLR",
-    "name": "International Conference on Learning Representations",
-    "url": "https://iclr.cc/Conferences/2027",
-    "when": "26–30 Apr 2027",
-    "place": "California, USA (venue TBA)",
-    "abstract": "2026-09-18",
-    "deadline": "2026-09-25",
-    "notify": "2026-12-16",
-    "tz": "AoE",
-    "note": "Main conference 26–28 Apr, workshops 29–30 Apr. Venue TBA."
-  },
-  {
-    "id": "aistats",
-    "cats": [
-      "ai"
-    ],
-    "abbr": "AISTATS",
-    "name": "Artificial Intelligence and Statistics",
-    "url": "https://virtual.aistats.org/Conferences/2027",
-    "when": "3–6 May 2027",
-    "place": "Montréal, Canada",
-    "abstract": "2026-09-29",
-    "deadline": "2026-10-06",
-    "rebuttal": "2026-11-22",
-    "notify": "2027-01-20",
     "tz": "AoE"
   },
   {
@@ -188,7 +164,7 @@ const CONFS = [
     "place": "San Jose McEnery Convention Center, USA",
     "deadline": null,
     "notify": null,
-    "note": "Cycle 1 is closed. Cycle 2 is expected in Feb 2027; the date is not out."
+    "note": "Cycle 2 is expected in Feb 2027. The date is not out."
   },
   {
     "id": "icdm",
@@ -248,37 +224,6 @@ const CONFS = [
     "note": "Dates are set. Deadline is TBD."
   },
   {
-    "id": "icassp",
-    "cats": [
-      "ai"
-    ],
-    "abbr": "ICASSP",
-    "name": "International Conference on Acoustics, Speech and Signal Processing",
-    "url": "https://2027.ieeeicassp.org/",
-    "when": "16–21 May 2027",
-    "place": "Toronto, Canada",
-    "deadline": "2026-09-23",
-    "notify": "2027-01-13",
-    "tz": "AoE",
-    "note": "Deadline taken from CCF Deadlines. Another listing said 16 Sep."
-  },
-  {
-    "id": "facct",
-    "cats": [
-      "ai"
-    ],
-    "abbr": "FAccT",
-    "name": "ACM Conference on Fairness, Accountability, and Transparency",
-    "url": "https://facctconference.org/2027/cfp.html",
-    "when": "21–24 Jun 2027",
-    "place": null,
-    "abstract": "2026-10-27",
-    "deadline": "2026-11-03",
-    "notify": "2027-03-23",
-    "tz": "AoE",
-    "note": "First decision 22 Dec 2026. Revisions due 28 Jan 2027. City not listed."
-  },
-  {
     "id": "aies",
     "cats": [
       "ai"
@@ -290,56 +235,6 @@ const CONFS = [
     "place": null,
     "deadline": null,
     "notify": null
-  },
-  {
-    "id": "satml",
-    "cats": [
-      "ai"
-    ],
-    "abbr": "SaTML",
-    "name": "IEEE Conference on Secure and Trustworthy Machine Learning",
-    "url": "https://satml.org/",
-    "when": "4–6 May 2027",
-    "place": "Reykjavik, Iceland",
-    "abstract": "2026-09-22",
-    "deadline": "2026-09-29",
-    "rebuttal": "2026-12-09",
-    "notify": "2027-02-01",
-    "tz": "AoE"
-  },
-  {
-    "id": "aamas",
-    "cats": [
-      "ai",
-      "nlp"
-    ],
-    "abbr": "AAMAS",
-    "name": "International Conference on Autonomous Agents and Multiagent Systems",
-    "url": "https://warwick.ac.uk/fac/sci/dcs/aamas2027/",
-    "when": "3–7 May 2027",
-    "place": "JW Marriott Hotel, Hanoi, Vietnam",
-    "abstract": "2026-10-01",
-    "deadline": "2026-10-08",
-    "rebuttal": "2026-11-24",
-    "notify": "2026-12-21",
-    "tz": "AoE",
-    "note": "Main track. AAAI fast track deadline 11 Dec 2026, notice 1 Feb 2027."
-  },
-  {
-    "id": "icra",
-    "cats": [
-      "ai"
-    ],
-    "abbr": "ICRA",
-    "name": "International Conference on Robotics and Automation",
-    "url": "https://2027.ieee-icra.org/",
-    "when": "24–28 May 2027",
-    "place": "COEX, Seoul, South Korea",
-    "deadline": "2026-09-16",
-    "notify": "2027-02-01",
-    "tz": "UTC−8",
-    "deadlineLabel": "Extended",
-    "note": "Extended deadline. Time zone is UTC−8, not AoE."
   },
   {
     "id": "iros",
@@ -369,40 +264,6 @@ const CONFS = [
     "notify": null
   },
   {
-    "id": "rss",
-    "cats": [
-      "ai"
-    ],
-    "abbr": "RSS",
-    "name": "Robotics: Science and Systems",
-    "url": "https://roboticsconference.org/",
-    "when": "6–11 Jul 2027",
-    "place": "Athens, Greece",
-    "deadline": "2026-12-04",
-    "rebuttal": "2027-02-12",
-    "notify": "2027-04-30",
-    "tz": "AoE",
-    "deadlineLabel": "Stage 1 abstract",
-    "note": "Stage 1 is a 6-page extended abstract."
-  },
-  {
-    "id": "cvpr",
-    "cats": [
-      "cv"
-    ],
-    "abbr": "CVPR",
-    "name": "Conference on Computer Vision and Pattern Recognition",
-    "url": "https://cvpr.thecvf.com/Conferences/2027",
-    "when": "20–21 Jun workshops, 22–24 Jun main 2027",
-    "place": "Seattle, WA, USA",
-    "abstract": "2026-11-10",
-    "deadline": "2026-11-16",
-    "rebuttal": "2027-02-01",
-    "notify": "2027-02-25",
-    "tz": "AoE",
-    "note": "Deadlines will not be extended. Supplementary material 23 Nov."
-  },
-  {
     "id": "iccv",
     "cats": [
       "cv"
@@ -428,22 +289,6 @@ const CONFS = [
     "place": null,
     "skip": true,
     "note": "Even years only. Next meeting is ECCV 2028."
-  },
-  {
-    "id": "wacv",
-    "cats": [
-      "cv"
-    ],
-    "abbr": "WACV",
-    "name": "Winter Conference on Applications of Computer Vision",
-    "url": "https://wacv.thecvf.com/",
-    "when": "6–8 Jan 2027",
-    "place": "Disney Springs, Buena Vista, FL, USA",
-    "deadline": "2026-08-28",
-    "notify": "2026-10-14",
-    "tz": "AoE",
-    "deadlineLabel": "Round 2",
-    "note": "Round 1 paper deadline was 26 Jun 2026."
   },
   {
     "id": "bmvc",
@@ -504,21 +349,6 @@ const CONFS = [
     "tz": "AoE"
   },
   {
-    "id": "icme",
-    "cats": [
-      "cv"
-    ],
-    "abbr": "ICME",
-    "name": "IEEE International Conference on Multimedia and Expo",
-    "url": "https://2027.ieeeicme.org/",
-    "when": "13–17 Jul 2027",
-    "place": "Xiamen, China",
-    "deadline": "2026-12-30",
-    "rebuttal": "2027-03-04",
-    "notify": "2027-03-24",
-    "tz": "AoE"
-  },
-  {
     "id": "acmmm",
     "cats": [
       "cv"
@@ -531,21 +361,6 @@ const CONFS = [
     "deadline": null,
     "notify": null,
     "note": "Dates are set. Deadline is TBA."
-  },
-  {
-    "id": "mmm",
-    "cats": [
-      "cv"
-    ],
-    "abbr": "MMM",
-    "name": "International Conference on Multimedia Modeling",
-    "url": "https://www.mmm2027.net/",
-    "when": "5–8 Jan 2027",
-    "place": "Siem Reap, Cambodia",
-    "deadline": "2026-08-30",
-    "notify": "2026-10-19",
-    "tz": "AoE",
-    "deadlineLabel": "Extended"
   },
   {
     "id": "icmr",
@@ -574,21 +389,6 @@ const CONFS = [
     "deadline": null,
     "notify": null,
     "note": "No 2027 call found. Link goes to the DBLP index."
-  },
-  {
-    "id": "fg",
-    "cats": [
-      "cv"
-    ],
-    "abbr": "FG",
-    "name": "International Conference on Automatic Face and Gesture Recognition",
-    "url": "https://fg2027.ieee-biometrics.org/",
-    "when": "27–29 Apr 2027",
-    "place": "Marrakesh, Morocco",
-    "abstract": "2026-10-23",
-    "deadline": "2026-10-30",
-    "notify": "2026-12-20",
-    "tz": "AoE"
   },
   {
     "id": "scia",
@@ -641,21 +441,6 @@ const CONFS = [
     "place": null,
     "deadline": null,
     "notify": null
-  },
-  {
-    "id": "3dv",
-    "cats": [
-      "cv"
-    ],
-    "abbr": "3DV",
-    "name": "International Conference on 3D Vision",
-    "url": "https://3dvconf.github.io/2027/",
-    "when": "6–9 Apr 2027",
-    "place": "Thessaloniki Concert Hall, Greece",
-    "abstract": "2026-08-28",
-    "deadline": "2026-08-28",
-    "notify": "2026-12-02",
-    "tz": "AoE"
   },
   {
     "id": "miccai",
@@ -714,44 +499,6 @@ const CONFS = [
     "notify": null
   },
   {
-    "id": "naacl",
-    "cats": [
-      "nlp"
-    ],
-    "abbr": "NAACL",
-    "name": "North American Chapter of the ACL",
-    "url": "https://2027.naacl.org/",
-    "when": "1–5 Jun 2027",
-    "place": "San Francisco, California, USA",
-    "deadline": "2026-12-23",
-    "notify": "2027-02-10",
-    "tz": "AoE",
-    "deadlineLabel": "Commitment",
-    "extras": [
-      {
-        "date": "2026-11-30",
-        "label": "ARR rebuttal"
-      }
-    ],
-    "note": "ARR papers closed 12 Oct 2026. This date is the commitment deadline."
-  },
-  {
-    "id": "eacl",
-    "cats": [
-      "nlp"
-    ],
-    "abbr": "EACL",
-    "name": "European Chapter of the ACL",
-    "url": "https://2027.eacl.org/",
-    "when": "9–14 Mar 2027",
-    "place": "Athens, Greece",
-    "deadline": "2026-10-11",
-    "notify": "2026-11-12",
-    "tz": "AoE",
-    "deadlineLabel": "Commitment",
-    "note": "ARR closed 3 Aug 2026. This date is the commitment deadline."
-  },
-  {
     "id": "aacl",
     "cats": [
       "nlp"
@@ -763,29 +510,7 @@ const CONFS = [
     "place": null,
     "deadline": null,
     "notify": null,
-    "note": "2026 was joint with IJCNLP. A 2027 meeting is not announced."
-  },
-  {
-    "id": "coling",
-    "cats": [
-      "nlp"
-    ],
-    "abbr": "COLING",
-    "name": "International Conference on Computational Linguistics",
-    "url": "https://2027.coling-iccl.org/",
-    "when": "6–7 May online, 9–14 May on site, 2027",
-    "place": "Macau SAR, China / Online",
-    "deadline": "2026-12-23",
-    "notify": "2027-02-10",
-    "tz": "AoE",
-    "deadlineLabel": "Commitment",
-    "extras": [
-      {
-        "date": "2026-11-30",
-        "label": "Round 1 rebuttal"
-      }
-    ],
-    "note": "ARR papers closed 12 Oct 2026. This date is the long-paper commitment."
+    "note": "A 2027 meeting is not announced."
   },
   {
     "id": "colm",
@@ -825,7 +550,7 @@ const CONFS = [
     "place": null,
     "deadline": null,
     "notify": null,
-    "note": "2026 was joint with AACL. 2027 is not announced."
+    "note": "A 2027 meeting is not announced."
   },
   {
     "id": "conll",
@@ -960,23 +685,7 @@ const CONFS = [
     "notify": null,
     "tz": "AoE",
     "deadlineLabel": "Round 3",
-    "note": "Rounds 1 and 2 are closed. Conference dates are TBD."
-  },
-  {
-    "id": "www",
-    "cats": [
-      "nlp"
-    ],
-    "abbr": "WWW",
-    "name": "The Web Conference",
-    "url": "https://www2027.thewebconf.org/",
-    "when": "10–14 May 2027",
-    "place": "Dublin, Ireland",
-    "abstract": "2026-10-18",
-    "deadline": "2026-10-25",
-    "rebuttal": "2026-12-20",
-    "notify": "2027-01-04",
-    "tz": "AoE"
+    "note": "Round 3. Conference dates are TBD."
   },
   {
     "id": "sigir",
@@ -992,37 +701,6 @@ const CONFS = [
     "deadline": "2027-01-21",
     "notify": "2027-04-05",
     "tz": "AoE"
-  },
-  {
-    "id": "ecir",
-    "cats": [
-      "nlp"
-    ],
-    "abbr": "ECIR",
-    "name": "European Conference on Information Retrieval",
-    "url": "https://www.ecir2027.co.uk/",
-    "when": "22–24 Mar 2027",
-    "place": "Southampton, UK",
-    "abstract": "2026-09-22",
-    "deadline": "2026-10-06",
-    "notify": "2026-12-08",
-    "note": "Main track. Other tracks use different dates. Times are UTC."
-  },
-  {
-    "id": "wsdm",
-    "cats": [
-      "nlp"
-    ],
-    "abbr": "WSDM",
-    "name": "Web Search and Data Mining",
-    "url": "https://www.wsdm-conference.org/2027/",
-    "when": "16–18 Feb 2027",
-    "place": "Cordis, Hong Kong SAR, China",
-    "deadline": "2026-11-17",
-    "notify": "2026-12-18",
-    "tz": "AoE",
-    "deadlineLabel": "Short paper",
-    "note": "Full papers closed 24 Aug 2026. This row is the short-paper track."
   },
   {
     "id": "cikm",
@@ -1050,7 +728,7 @@ const CONFS = [
     "deadline": "2027-02-01",
     "notify": null,
     "notifyText": "Early Apr 2027",
-    "note": "Window opens 20 Nov 2026. Deadline is midnight UTC−11. Camera-ready 7 May."
+    "note": "Deadline is midnight UTC−11. Camera-ready 7 May."
   },
   {
     "id": "ccn",
@@ -1064,20 +742,6 @@ const CONFS = [
     "place": null,
     "deadline": null,
     "notify": null
-  },
-  {
-    "id": "esann",
-    "cats": [
-      "cog"
-    ],
-    "abbr": "ESANN",
-    "name": "European Symposium on Artificial Neural Networks, Computational Intelligence and Machine Learning",
-    "url": "https://www.esann.org/",
-    "when": "21–23 Apr 2027",
-    "place": "Bruges, Belgium / Online",
-    "deadline": "2026-11-26",
-    "notify": "2027-01-23",
-    "note": "Confirm the clock time on the official site."
   },
   {
     "id": "escop",
@@ -1366,38 +1030,6 @@ const CONFS = [
     "note": "Tokyo is announced. Deadline is TBA."
   },
   {
-    "id": "eurographics",
-    "cats": [
-      "art"
-    ],
-    "abbr": "Eurographics",
-    "name": "Annual Conference of the European Association for Computer Graphics",
-    "url": "https://eg2027.isti.cnr.it/",
-    "when": "10–14 May 2027",
-    "place": "IMT Campus, Lucca, Italy",
-    "abstract": "2026-09-26",
-    "deadline": "2026-10-02",
-    "rebuttal": "2026-12-01",
-    "notify": "2027-02-10",
-    "note": "Times are UTC, not AoE."
-  },
-  {
-    "id": "chi",
-    "cats": [
-      "art"
-    ],
-    "abbr": "CHI",
-    "name": "Conference on Human Factors in Computing Systems",
-    "url": "https://chi2027.acm.org/",
-    "when": "10–14 May 2027",
-    "place": "David L. Lawrence Convention Center, Pittsburgh, USA",
-    "deadline": "2026-09-10",
-    "rebuttal": "2026-12-03",
-    "notify": "2026-12-17",
-    "tz": "AoE",
-    "note": "No separate abstract deadline."
-  },
-  {
     "id": "dis",
     "cats": [
       "art"
@@ -1428,22 +1060,6 @@ const CONFS = [
     "tz": "AoE"
   },
   {
-    "id": "iui",
-    "cats": [
-      "art"
-    ],
-    "abbr": "IUI",
-    "name": "Intelligent User Interfaces",
-    "url": "https://iui.hosting.acm.org/2027/",
-    "when": "8–11 Feb 2027",
-    "place": "Helsinki, Finland",
-    "abstract": "2026-08-13",
-    "deadline": "2026-08-20",
-    "rebuttal": "2026-11-05",
-    "notify": "2026-11-23",
-    "tz": "AoE"
-  },
-  {
     "id": "candc",
     "cats": [
       "art"
@@ -1468,21 +1084,6 @@ const CONFS = [
     "place": null,
     "deadline": null,
     "notify": null
-  },
-  {
-    "id": "tei",
-    "cats": [
-      "art"
-    ],
-    "abbr": "TEI",
-    "name": "Tangible, Embedded and Embodied Interaction",
-    "url": "https://tei.acm.org/2027/",
-    "when": "24–27 Jan 2027",
-    "place": "Centro Cultural de Belém, Lisbon, Portugal",
-    "deadline": "2026-08-06",
-    "notify": "2026-11-13",
-    "tz": "AoE",
-    "note": "Conditional acceptance 22 Oct. Final notice 13 Nov."
   },
   {
     "id": "imx",
@@ -1551,37 +1152,6 @@ const CONFS = [
     "abstract": "2027-02-10",
     "deadline": "2027-02-17",
     "notify": "2027-06-17",
-    "tz": "AoE"
-  },
-  {
-    "id": "hri",
-    "cats": [
-      "art"
-    ],
-    "abbr": "HRI",
-    "name": "ACM/IEEE International Conference on Human-Robot Interaction",
-    "url": "https://humanrobotinteraction.org/2027/",
-    "when": "8–12 Mar 2027",
-    "place": "Santa Clara, CA, USA",
-    "abstract": "2026-09-11",
-    "deadline": "2026-09-18",
-    "notify": "2026-11-30",
-    "tz": "AoE",
-    "note": "Full papers. Short papers closed 1 Oct, notice 2 Dec."
-  },
-  {
-    "id": "ieeevr",
-    "cats": [
-      "art"
-    ],
-    "abbr": "IEEE VR",
-    "name": "IEEE Conference on Virtual Reality and 3D User Interfaces",
-    "url": "https://ieeevr.org/2027/",
-    "when": "27 Feb – 3 Mar 2027",
-    "place": "Melbourne, Australia",
-    "abstract": "2026-08-24",
-    "deadline": "2026-08-31",
-    "notify": "2027-01-07",
     "tz": "AoE"
   },
   {
@@ -1771,21 +1341,6 @@ const CONFS = [
     "place": null,
     "deadline": null,
     "notify": null
-  },
-  {
-    "id": "evomusart",
-    "cats": [
-      "art"
-    ],
-    "abbr": "EvoMUSART",
-    "name": "International Conference on Artificial Intelligence in Music, Sound, Art and Design",
-    "url": "https://www.evostar.org/2027/",
-    "when": "31 Mar – 2 Apr 2027",
-    "place": "Mainz, Germany",
-    "deadline": "2026-11-16",
-    "notify": "2027-01-10",
-    "deadlineLabel": "Extended",
-    "note": "Part of EvoStar. Deadline extended from 1 Nov to 16 Nov."
   },
   {
     "id": "artsit",
