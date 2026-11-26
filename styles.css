@@ -1,14 +1,14 @@
 :root {
   color-scheme: light;
-  --ink: #1c3348;
-  --muted: #5c7388;
-  --line: #c9d8e8;
-  --open: #1a6d8c;
-  --page: #e7f0f8;
-  --bar: rgba(231, 240, 248, 0.94);
-  --row-a: #f4f8fc;
-  --row-b: #d5e5f4;
-  --accent: #1f4e79;
+  --ink: #17293a;
+  --muted: #52687c;
+  --line: #b3c6d6;
+  --open: #1a657c;
+  --page: #d5e2ed;
+  --bar: rgba(213, 226, 237, 0.94);
+  --row-a: #e4edf5;
+  --row-b: #c9d8e6;
+  --accent: #1b4568;
 }
 
 * { box-sizing: border-box; }
@@ -60,13 +60,13 @@ input[type="search"] {
   border-radius: 8px;
   padding: 8px 10px;
   font: inherit;
-  background: #f8fbfe;
+  background: #e8f0f6;
   color: var(--ink);
 }
-input[type="search"]:focus { outline: 2px solid #b9cfe4; }
+input[type="search"]:focus { outline: 2px solid #a8c0d4; }
 .seg { display: flex; border: 1px solid var(--line); border-radius: 8px; overflow: hidden; }
 .seg button { padding: 8px 12px; }
-.seg button.on { background: var(--accent); color: #f7fbff; }
+.seg button.on { background: var(--accent); color: #f3f7fb; }
 
 .count { color: var(--muted); font-size: 13px; margin: 14px 0; }
 .table-wrap { overflow-x: auto; }
