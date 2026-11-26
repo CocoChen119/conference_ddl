@@ -31,6 +31,16 @@ const META = {
       "label": "Game",
       "title": "Games"
     }
+  ],
+  "regions": [
+    { "id": "all", "label": "All" },
+    { "id": "europe", "label": "Europe" },
+    { "id": "america", "label": "America" },
+    { "id": "asia", "label": "Asia" },
+    { "id": "oceania", "label": "Oceania" },
+    { "id": "africa", "label": "Africa" },
+    { "id": "online", "label": "Online" },
+    { "id": "tba", "label": "TBA" }
   ]
 };
 

@@ -1,6 +1,19 @@
 const MONTHS = ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"];
 
-const state = { cat: "all", status: "all", q: "" };
+const state = { cat: "all", region: "all", status: "all", q: "" };
+
+function regionOf(c) {
+  const place = (c.place || "").toLowerCase();
+  if (!place) return "tba";
+  if (place === "online") return "online";
+  if (place.includes("europe")) return "europe";
+  if (/usa|canada|brazil|montr[eé]al/.test(place)) return "america";
+  if (/japan|china|hong kong|singapore|korea/.test(place)) return "asia";
+  if (/australia|new zealand/.test(place)) return "oceania";
+  if (/south africa/.test(place)) return "africa";
+  if (/uk|scotland|spain|italy|france|netherlands|sweden|austria|greece|romania|cyprus/.test(place)) return "europe";
+  return "tba";
+}
 
 function aoeEnd(iso) {
   const [y, m, d] = iso.split("-").map(Number);
@@ -43,8 +56,17 @@ function esc(value) {
   }[ch]));
 }
 
+function inCat(c, cat) {
+  return cat === "all" || c.cats.includes(cat);
+}
+
+function inRegion(c, region) {
+  return region === "all" || regionOf(c) === region;
+}
+
 function matches(c) {
-  if (state.cat !== "all" && !c.cats.includes(state.cat)) return false;
+  if (!inCat(c, state.cat)) return false;
+  if (!inRegion(c, state.region)) return false;
   const st = paperStatus(c);
   if (state.status === "open" && st !== "open") return false;
   if (state.status === "tba" && st !== "tba") return false;
@@ -65,9 +87,7 @@ function renderNav() {
   const nav = document.getElementById("cats");
   nav.innerHTML = "";
   for (const cat of META.categories) {
-    const n = cat.id === "all"
-      ? CONFS.length
-      : CONFS.filter((c) => c.cats.includes(cat.id)).length;
+    const n = CONFS.filter((c) => inCat(c, cat.id) && inRegion(c, state.region)).length;
     const btn = document.createElement("button");
     btn.type = "button";
     btn.className = cat.id === state.cat ? "on" : "";
@@ -78,6 +98,26 @@ function renderNav() {
       render();
     });
     nav.appendChild(btn);
+  }
+
+  const regions = document.getElementById("regions");
+  regions.className = "where";
+  regions.innerHTML = "";
+  const label = document.createElement("span");
+  label.className = "where-label";
+  label.textContent = "Location";
+  regions.appendChild(label);
+  for (const region of META.regions) {
+    const n = CONFS.filter((c) => inCat(c, state.cat) && inRegion(c, region.id)).length;
+    const btn = document.createElement("button");
+    btn.type = "button";
+    btn.className = region.id === state.region ? "on" : "";
+    btn.textContent = `${region.label} ${n}`;
+    btn.addEventListener("click", () => {
+      state.region = region.id;
+      render();
+    });
+    regions.appendChild(btn);
   }
 
   const seg = document.getElementById("status");

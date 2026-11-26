@@ -42,7 +42,15 @@ header p { margin: 8px 0 0; color: var(--muted); max-width: 640px; }
   border-bottom: 1px solid var(--line);
 }
 
-nav { display: flex; gap: 4px; overflow-x: auto; }
+nav { display: flex; gap: 4px; overflow-x: auto; align-items: center; }
+nav.where { margin-top: 2px; }
+.where-label {
+  padding: 8px 8px 8px 0;
+  color: var(--muted);
+  font-size: 12px;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+}
 nav button, .seg button {
   border: 0;
   background: transparent;
