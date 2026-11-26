@@ -9,7 +9,12 @@ const META = {
     {
       "id": "ai",
       "label": "AI",
-      "title": "AI, language, and games"
+      "title": "AI and language"
+    },
+    {
+      "id": "game",
+      "label": "Game",
+      "title": "Games"
     },
     {
       "id": "cv",
@@ -617,7 +622,7 @@ const CONFS = [
   {
     "id": "aiide",
     "cats": [
-      "ai"
+      "game"
     ],
     "abbr": "AIIDE",
     "name": "Artificial Intelligence and Interactive Digital Entertainment",
@@ -631,7 +636,7 @@ const CONFS = [
   {
     "id": "cogames",
     "cats": [
-      "ai"
+      "game"
     ],
     "abbr": "CoG",
     "name": "IEEE Conference on Games",
@@ -646,7 +651,7 @@ const CONFS = [
   {
     "id": "fdg",
     "cats": [
-      "ai"
+      "game"
     ],
     "abbr": "FDG",
     "name": "Foundations of Digital Games",
