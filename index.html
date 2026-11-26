@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>2027 Conference Deadlines</title>
+  <meta name="description" content="2027 AI conference deadlines, notifications, locations, and links." />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <header>
+    <h1>2027 Conference Deadlines</h1>
+    <p>Website, deadline, notification, and location. Blank dates are not announced. Checked 26 Nov 2026.</p>
+  </header>
+
+  <div class="bar">
+    <nav id="cats" aria-label="Categories"></nav>
+    <div class="row">
+      <input id="q" type="search" placeholder="Search" aria-label="Search conferences" />
+      <div class="seg" id="status" role="tablist" aria-label="Status"></div>
+    </div>
+  </div>
+
+  <main>
+    <p class="count" id="count"></p>
+    <div class="table-wrap">
+      <table>
+        <thead>
+          <tr>
+            <th>Conference</th>
+            <th>Deadline</th>
+            <th>Notification</th>
+            <th>Location</th>
+            <th>Dates</th>
+            <th></th>
+          </tr>
+        </thead>
+        <tbody id="rows"></tbody>
+      </table>
+    </div>
+    <p class="empty" id="empty" hidden>No conferences match.</p>
+  </main>
+
+  <footer>
+    <p>Times are Anywhere on Earth unless a row says otherwise. Confirm every date on the official site before you submit.</p>
+    <p>Some cognition meetings publish abstracts only. COSYNE is the short name for Computational and Systems Neuroscience.</p>
+  </footer>
+
+  <script src="data.js"></script>
+  <script src="app.js"></script>
+</body>
+</html>
