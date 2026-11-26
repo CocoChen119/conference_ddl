@@ -6,8 +6,7 @@
   --open: #3d6b4a;
   --page: #e6dfd6;
   --bar: rgba(230, 223, 214, 0.94);
-  --row-a: #f4efe8;
-  --row-b: #ddd4c8;
+  --row: #f4efe8;
   --accent: #3f362e;
 }
 
@@ -112,8 +111,7 @@ th .sort {
   padding: 0;
 }
 th .sort.on { color: var(--ink); }
-tbody tr:nth-child(odd) { background: var(--row-a); }
-tbody tr:nth-child(even) { background: var(--row-b); }
+tbody tr { background: var(--row); }
 tbody tr:hover { background: #d8cfc3; }
 td {
   padding: 12px 14px;
