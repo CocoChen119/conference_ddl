@@ -123,7 +123,7 @@ function renderRows() {
       <td>${notifyText(c)}</td>
       <td>${esc(c.place || "—")}</td>
       <td>${esc(c.when || "—")}</td>
-      <td>${c.abstractOnly ? "Yes" : "—"}</td>
+      <td class="req">${c.req ? esc(c.req) : "—"}</td>
     `;
     body.appendChild(tr);
   }

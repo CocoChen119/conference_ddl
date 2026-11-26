@@ -37,6 +37,7 @@ const META = {
 const CONFS = [
   {
     "id": "ijcai",
+    "req": "7 pages plus up to 2 reference pages. Tracks: Main, AI4Science, AI and Health, AI Arts and Creativity, AI for Social Good.",
     "cats": [
       "ai"
     ],
@@ -111,6 +112,7 @@ const CONFS = [
   },
   {
     "id": "colt",
+    "req": "12 PMLR pages, excluding references. Accepted papers may appear as a 1-page extended abstract.",
     "cats": [
       "ai"
     ],
@@ -140,6 +142,7 @@ const CONFS = [
   },
   {
     "id": "ecmlpkdd",
+    "req": "Demo, applied data science, industry, and PhD tracks. Length not posted.",
     "cats": [
       "ai"
     ],
@@ -154,6 +157,7 @@ const CONFS = [
   },
   {
     "id": "kdd",
+    "req": "Research and applied data science: 8 content pages. Also datasets and benchmarks, and AI for sciences.",
     "cats": [
       "ai"
     ],
@@ -197,6 +201,7 @@ const CONFS = [
   },
   {
     "id": "ijcnn",
+    "req": "Up to 6 pages, IEEE two-column.",
     "cats": [
       "ai"
     ],
@@ -471,6 +476,7 @@ const CONFS = [
   },
   {
     "id": "acl",
+    "req": "Long papers 8 pages; short papers 4 pages. Theme track can be either.",
     "cats": [
       "ai"
     ],
@@ -650,6 +656,7 @@ const CONFS = [
   },
   {
     "id": "fdg",
+    "req": "Full papers usually up to 16 pages (desk reject over 24); abstract-only up to 2 pages. Also late-breaking, demos, and a doctoral consortium.",
     "cats": [
       "game"
     ],
@@ -679,6 +686,7 @@ const CONFS = [
   },
   {
     "id": "icwsm",
+    "req": "Full papers up to 11 pages, including references. Also posters, demos, datasets, and a social science and sociophysics track.",
     "cats": [
       "ai"
     ],
@@ -723,6 +731,7 @@ const CONFS = [
   },
   {
     "id": "cogsci",
+    "req": "Research papers up to 6 pages, as talks or posters. You may publish only the abstract.",
     "cats": [
       "cog"
     ],
@@ -738,6 +747,7 @@ const CONFS = [
   },
   {
     "id": "ccn",
+    "req": "8-page proceedings, or 2-page extended abstracts.",
     "cats": [
       "cog"
     ],
@@ -754,6 +764,7 @@ const CONFS = [
   },
   {
     "id": "escop",
+    "req": "Abstracts for regular talks, blitz talks, or posters. Also symposia.",
     "cats": [
       "cog"
     ],
@@ -785,6 +796,7 @@ const CONFS = [
   },
   {
     "id": "ecvp",
+    "req": "Talks, posters, and symposia.",
     "cats": [
       "cog"
     ],
@@ -918,6 +930,7 @@ const CONFS = [
   },
   {
     "id": "etra",
+    "req": "Full papers and short papers. Page limits are not posted.",
     "cats": [
       "cog"
     ],
@@ -1015,6 +1028,7 @@ const CONFS = [
   },
   {
     "id": "siggraph",
+    "req": "One technical-papers track. No page cap for journal papers; conference papers at most 9 pages, excluding references.",
     "cats": [
       "art"
     ],
@@ -1126,6 +1140,7 @@ const CONFS = [
   },
   {
     "id": "cscw",
+    "req": "Rolling papers in PACM HCI. Length not posted.",
     "cats": [
       "art"
     ],
@@ -1318,6 +1333,7 @@ const CONFS = [
   },
   {
     "id": "xcoax",
+    "req": "Papers 3,000–6,000 words. Artworks and performances: 200-word abstract plus 700–2,000 words.",
     "cats": [
       "art"
     ],
