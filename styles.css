@@ -24,7 +24,7 @@ body {
 }
 
 header, .bar, main, footer {
-  max-width: 1080px;
+  max-width: 1280px;
   margin: 0 auto;
   padding-left: 20px;
   padding-right: 20px;
@@ -93,7 +93,13 @@ input[type="search"]:focus { outline: 2px solid #c9bfb2; }
 }
 button:focus-visible, input:focus-visible { outline: 2px solid #c9bfb2; outline-offset: 2px; }
 .table-wrap { overflow-x: auto; }
-table { width: 100%; border-collapse: collapse; min-width: 50rem; }
+table { width: 100%; border-collapse: collapse; table-layout: fixed; }
+th:nth-child(1), td:nth-child(1) { width: 16%; }
+th:nth-child(2), td:nth-child(2) { width: 13%; }
+th:nth-child(3), td:nth-child(3) { width: 12%; }
+th:nth-child(4), td:nth-child(4) { width: 14%; }
+th:nth-child(5), td:nth-child(5) { width: 12%; }
+th:nth-child(6), td:nth-child(6) { width: 33%; }
 th {
   text-align: left;
   font-size: 0.8rem;
@@ -118,10 +124,8 @@ td {
   border-bottom: 4px solid var(--page);
   vertical-align: top;
 }
-td:nth-child(2),
-td:nth-child(3),
-td:nth-child(5) { white-space: nowrap; }
-td.req { min-width: 12rem; max-width: 18.5rem; }
+td { overflow-wrap: break-word; }
+td.req { width: 33%; }
 .abbr { font-weight: 650; }
 a.abbr { color: var(--accent); text-underline-offset: 2px; }
 .name { display: block; color: var(--muted); font-size: 0.87rem; margin-top: 2px; }
@@ -135,4 +139,6 @@ footer p { margin: 0 0 6px; }
 
 @media (max-width: 720px) {
   .row { flex-direction: column; align-items: stretch; }
+  table { table-layout: auto; min-width: 46rem; }
+  th:nth-child(6), td.req { width: auto; min-width: 16rem; }
 }
